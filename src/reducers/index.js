@@ -1,10 +1,6 @@
-import {combineReducers} from 'redux';
-import AuthReducer from './AuthReducer'
-import SearchSongReducer from './SearchSongReducer'
-import Playlist from './PlaylistRudecer'
+import { combineReducers } from 'redux';
+import AuthReducer from './AuthReducer';
 
 export default combineReducers({
-        auth: AuthReducer,
-        playlist: Playlist,
-        songs:SearchSongReducer
-    });
+  auth: AuthReducer,
+});
