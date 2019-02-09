@@ -1,11 +1,11 @@
 import React from 'react';
 import { Scene, Router, Actions } from 'react-native-router-flux';
-import LoginForm from './components/LoginForm';
+import ShoppingCart from './components/ShoppingCart';
 const RouterComponent = () => {
   return (
     <Router>
-      <Scene key="auth">
-        <Scene key="login" component={LoginForm} title="Please Login" />
+      <Scene key="main">
+        <Scene key="cart" component={ShoppingCart} title="Cart" />
       </Scene>
     </Router>
   );
