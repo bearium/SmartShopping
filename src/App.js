@@ -6,7 +6,6 @@
  * @flow
  */
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
 import { Provider } from "react-redux";
 import {createStore, applyMiddleware} from 'redux';
 import ReduxThunk from 'redux-thunk';
@@ -19,14 +18,17 @@ class App extends Component
 {
     componentWillMount() {
         const config = {
-            apiKey: 'AIzaSyBR4FTGiOcTZ5OBNi6thE0KhCDR3PaOtQM',
-            authDomain: 'manager-2328b.firebaseapp.com',
-            databaseURL: 'https://manager-2328b.firebaseio.com',
-            storageBucket: 'manager-2328b.appspot.com',
-            messagingSenderId: '193075244299'
+            apiKey: "AIzaSyBubBsFMONE-WohDsvGgG6Kg-m3-HC9shU",
+            authDomain: "smartshopper-cc2c0.firebaseapp.com",
+            databaseURL: "https://smartshopper-cc2c0.firebaseio.com",
+            projectId: "smartshopper-cc2c0",
+            storageBucket: "smartshopper-cc2c0.appspot.com",
+            messagingSenderId: "925667531658"
         };
 
-        firebase.initializeApp(config);
+        if (!firebase.apps.length) {
+            firebase.initializeApp({});
+        }
     }
 
   render() {
